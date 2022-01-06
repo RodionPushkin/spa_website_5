@@ -1,20 +1,31 @@
 <template>
   <div class="content mf m">
     <!-- <router-link to="/">page</router-link> -->
+    <timer></timer>
+    <headerComponent></headerComponent>
     <main class="main">
       <router-view/>
     </main>
   </div>
 </template>
-
+<script>
+import headerComponent from "@/components/headerComponent.vue"
+import Timer from './components/timer.vue'
+export default {
+  components:{
+    headerComponent,
+    Timer,
+  }
+}
+</script>
 <style lang="scss">
 :root {
-  --main-color: #f9f9f9;
-  --second-color: #f9f9f9;
-  --third-color: #f9f9f9;
-  --bg-color: #000015;
+  --main-color: #ffffff;
+  --second-color: #ffffff;
+  --third-color: #ffffff;
+  --bg-color: #ffffff;
   --light-color: rgba(255, 255, 255, 0.90);
-  --dark-color: #000015;
+  --dark-color: rgba(7, 7, 7, 0.90);
 }
 *{padding: 0;margin: 0;border: 0; scroll-behavior: smooth;color: inherit;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
@@ -105,7 +116,7 @@ body{overflow-x: hidden;overflow-y: overlay;}
   font-family: 'Roboto', sans-serif;
 }
 .sf{
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 /////////////////////////////////////////////////////////
 // settings
@@ -124,13 +135,14 @@ body{overflow-x: hidden;overflow-y: overlay;}
 .main{
   flex: 1 0 auto;
   min-height: 100vh;
+  color: var(--dark-color);
 }
 .content{
   display: flex;
   flex-direction: column;
   width: 100vw;
   position: relative;
-  background: var(--bg-color);
+  // background: var(--bg-color);
   overflow: hidden;
 }
 .page{
@@ -138,7 +150,6 @@ body{overflow-x: hidden;overflow-y: overlay;}
   min-height: 100vh;
 }
 .padding{
-  transition: 0.04s;
   @media (min-width: 700px){
     padding: 24px 72px 0px 72px;
   }
