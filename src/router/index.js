@@ -7,11 +7,16 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import('../views/About.vue')
-  // }
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: () => import('../views/cart/index.vue')
+  },
+  {
+    path: '/product',
+    name: 'Product',
+    component: () => import('../views/product/index.vue')
+  }
 ]
 
 const router = createRouter({

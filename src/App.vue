@@ -1,7 +1,7 @@
 <template>
   <div class="content mf m">
     <!-- <router-link to="/">page</router-link> -->
-    <timer></timer>
+    <timerComponent></timerComponent>
     <headerComponent></headerComponent>
     <main class="main">
       <router-view/>
@@ -10,11 +10,11 @@
 </template>
 <script>
 import headerComponent from "@/components/headerComponent.vue"
-import Timer from './components/timer.vue'
+import timerComponent from './components/timerComponent.vue'
 export default {
   components:{
     headerComponent,
-    Timer,
+    timerComponent,
   }
 }
 </script>

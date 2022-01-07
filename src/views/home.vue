@@ -4,17 +4,28 @@
       <img src="/shum.png" alt="">
       <video class="video" src="/pexels-rostislav-uzunov-9150545.mp4" autoplay muted loop preload></video>
     </div>
-    <h2 class="xl sf"><span class="l">Самые лучшие</span><br>кросовочки<br>для тебя солнце</h2>
-    <a class="l sf" href="">посмотреть</a>
-    <div class="product product-1">
+    <router-link to="/">
+      <h2 class="xl sf"><span class="l">Самые лучшие</span><br>кросовочки<br>для тебя солнце</h2>
+    </router-link>
+    <router-link  class="l sf" to="/cart">в каталог</router-link>
+    <router-link to="/products/1" class="product product-1">
       <img src="/pictures/1.png">
-    </div>
-    <div class="product product-2">
+      <div class="product__description">
+        <button class="button sf m">посмотреть</button>
+      </div>
+    </router-link>
+    <router-link to="/products/2" class="product product-2">
       <img src="/pictures/2.png">
-    </div>
-    <div class="product product-3">
+      <div class="product__description">
+        <button class="button sf m">посмотреть</button>
+      </div>
+    </router-link>
+    <router-link to="/products/3" class="product product-3">
       <img src="/pictures/3.png">
-    </div>
+      <div class="product__description">
+        <button class="button sf m">посмотреть</button>
+      </div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -32,6 +43,22 @@ export default {
     color: var(--light-color);
     margin-top: 72px;
     margin-left: 72px;
+    @media (max-width: 1356px) {
+      margin-top: 56px;
+      margin-left: 24px;
+    }
+    @media (max-width: 466px) {
+      margin-top: 56px;
+      margin-left: 12px;
+    }
+    @media (max-width: 412px) {
+      font-size: 24px;
+    }
+    span{
+      @media (max-width: 412px) {
+        font-size: 24px;
+      }
+    }
   }
   a.l{
     color: var(--light-color);
@@ -41,6 +68,12 @@ export default {
     margin: 0;
     bottom: 144px;
     transition: 0.3s;
+    word-break: none;
+    @media (max-width: 412px) {
+      font-size: 24px;
+      width: 100%;
+      text-align: center;
+    }
   }
   a.l:hover{
     transition: 0.2s;
@@ -91,25 +124,68 @@ export default {
     transition: 0.5s;
     border-radius: 4px;
   }
+  .product__description{
+    transition: 0.5s;
+    opacity: 0;
+  }
   &:hover{
     background: #fff;
     img{
       opacity: 0;
+    }
+    .product__description{
+      opacity: 1;
+    }
+  }
+  .product__description{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    height: 100%;
+    width: 100%;
+    .button{
+      background: none;
+      color: var(--dark-color);
+      border-radius: 0px
+    }
+    .product__description-cost{
+      text-align: center;
+      margin-bottom: 16px;
     }
   }
 }
 .product-1{
   bottom: 120px;
   left: 30px;
+  @media (max-width: 1041px) {
+    display: none;
+  }
 }
 .product-2{
   top: 178px;
   right: 496px;
   transform: scale(1.4);
+  @media (max-width: 1620px) {
+    right: 296px;
+  }
+  @media (max-width: 1356px) {
+    right: 96px;
+    transform: scale(1.1);
+  }
+  @media (max-width: 1041px) {
+    display: none;
+  }
 }
 .product-3{
   bottom: 48px;
   right: 48px;
   transform: scale(1.3);
+  @media (max-width: 1041px) {
+    display: none;
+  }
 }
 </style>
