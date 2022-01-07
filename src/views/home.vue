@@ -1,27 +1,27 @@
 <template>
   <div class="page padding">
     <div class="video-wrapp">
-      <img src="/shum.png" alt="">
-      <video class="video" src="/pexels-rostislav-uzunov-9150545.mp4" autoplay muted loop preload></video>
+      <img src="https://tequila1boy.github.io/spa_website_5/shum.png" alt="">
+      <video class="video" src="https://tequila1boy.github.io/spa_website_5/pexels-rostislav-uzunov-9150545.mp4" autoplay muted loop preload></video>
     </div>
     <router-link to="/">
       <h2 class="xl sf"><span class="l">Самые лучшие</span><br>кросовочки<br>для тебя солнце</h2>
     </router-link>
     <router-link  class="l sf" to="/cart">в каталог</router-link>
     <router-link to="/products/1" class="product product-1">
-      <img src="/pictures/1.png">
+      <img src="https://tequila1boy.github.io/spa_website_5/pictures/1.png">
       <div class="product__description">
         <button class="button sf m">посмотреть</button>
       </div>
     </router-link>
     <router-link to="/products/2" class="product product-2">
-      <img src="/pictures/2.png">
+      <img src="https://tequila1boy.github.io/spa_website_5/pictures/2.png">
       <div class="product__description">
         <button class="button sf m">посмотреть</button>
       </div>
     </router-link>
     <router-link to="/products/3" class="product product-3">
-      <img src="/pictures/3.png">
+      <img src="https://tequila1boy.github.io/spa_website_5/pictures/3.png">
       <div class="product__description">
         <button class="button sf m">посмотреть</button>
       </div>
